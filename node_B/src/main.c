@@ -1,6 +1,10 @@
 #include <zephyr/kernel.h>
+#include <zephyr/sys/printk.h>
 
-int main(void)
+void main(void)
 {
-        return 0;
+    while (1) {
+        printk("Hello!\n");
+        k_sleep(K_SECONDS(1));
+    }
 }
