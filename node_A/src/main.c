@@ -127,10 +127,9 @@ void main(void)
         /* Bygg payload for denne målingen */
         build_payload(seq_u8, &t, &rh);
 
-        /* Debug: print payload som hex (samme bytes som Node B skal dekode) */
-        printk("Payload: ");
+        /* Send payload som HEX-streng uten mellomrom + newline */
         for (int i = 0; i < PAYLOAD_LEN; i++) {
-            printk("%02X ", payload[i]);
+        printk("%02X", payload[i]);
         }
         printk("\n");
 
