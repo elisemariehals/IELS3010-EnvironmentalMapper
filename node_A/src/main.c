@@ -117,7 +117,7 @@ void main(void)
         rh.val2 = 0;
 #endif
 
-        printk("seq=%d\n", seq);
+        /*printk("seq=%d\n", seq);
         printk("T = %d.%06d C, RH = %d.%06d %%\n",
                t.val1, t.val2,
                rh.val1, rh.val2);
@@ -128,7 +128,7 @@ void main(void)
         build_payload(seq_u8, &t, &rh);
 
         /* Debug: print payload som hex (samme bytes som Node B skal dekode) */
-        printk("Payload bytes: ");
+        printk("Payload: ");
         for (int i = 0; i < PAYLOAD_LEN; i++) {
             printk("%02X ", payload[i]);
         }
@@ -137,4 +137,4 @@ void main(void)
         /* 3 sek – innenfor 2–5 s kravet */
         k_sleep(K_SECONDS(3));
     }
-}
+} 
